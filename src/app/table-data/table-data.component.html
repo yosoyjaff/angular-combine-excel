@@ -1,0 +1,30 @@
+<div class="section">
+  <!-- {{dataService.JsonData | json}} -->
+  <table class="styled-table">
+    <tr *ngFor="let row of dataService.JsonData">
+      <td *ngFor="let val of row">
+        {{ val }}
+      </td>
+    </tr>
+  </table>
+
+  <button
+    mat-fab
+    color="primary"
+    matTooltip="Descargar Archivo"
+    *ngIf="this.dataService.JsonData.length > 0"
+    class="export-btn"
+    (click)="exportFile()"
+  >
+    <mat-icon>file_download</mat-icon>
+  </button>
+  <button
+    mat-fab
+    color="warn"
+    matTooltip="Atras"
+    class="back-btn"
+    routerLink="/upload"
+  >
+    <mat-icon> arrow_back </mat-icon>
+  </button>
+</div>

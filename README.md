@@ -32,10 +32,6 @@ ng serve
 
 3. Realiza las acciones necesarias en la aplicación.
 
-## Características
-
-- Lista de características principales de la aplicación.
-
 ## Notas adicionales
 
 - Esta aplicación solo combina archivos de Excel del mismo formato. Asegúrate de que todos los archivos tengan la misma estructura antes de combinarlos.

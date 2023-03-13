@@ -10,17 +10,12 @@ const routes: Routes = [
     redirectTo: 'upload',
   },
   {
-    path: '**',
-    pathMatch: 'full',
-    redirectTo: 'upload',
+    path: 'upload',
+    component: FileUploaderComponent,
   },
   {
     path: 'display',
     component: TableDataComponent,
-  },
-  {
-    path: 'upload',
-    component: FileUploaderComponent,
   },
 ];
 

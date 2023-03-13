@@ -2,14 +2,13 @@
   hidden
   type="file"
   #file
-  accept="application/vnd.openxmlformats-officedocument.spreadsheetml.sheet"
   ngFileSelect
   [options]="options"
+  accept="application/vnd.openxmlformats-officedocument.spreadsheetml.sheet"
   (uploadOutput)="onUploadOutput($event)"
   [uploadInput]="uploadInput"
   multiple
 />
-
 <mat-card class="example-card">
   <mat-card-header>
     <mat-card-title>Excel APP</mat-card-title>

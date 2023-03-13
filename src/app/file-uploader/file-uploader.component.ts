@@ -49,6 +49,14 @@ export class FileUploaderComponent implements OnInit {
   onUploadOutput(output: UploadOutput): void {
     switch (output.type) {
       case 'allAddedToQueue':
+        // uncomment this if you want to auto upload files when added
+        // const event: UploadInput = {
+        //   type: 'uploadAll',
+        //   url: '/upload',
+        //   method: 'POST',
+        //   data: { foo: 'bar' }
+        // };
+        // this.uploadInput.emit(event);
         break;
       case 'addedToQueue':
         if (typeof output.file !== 'undefined') {
@@ -79,8 +87,25 @@ export class FileUploaderComponent implements OnInit {
         this.dragOver = false;
         break;
       case 'done':
+        // The file is downloaded
         break;
     }
+  }
+
+  startUpload(): void {
+    console.log(this.files);
+    const event: UploadInput = {
+      type: 'uploadAll',
+      url: 'http://ngx-uploader.com/upload',
+      method: 'POST',
+      data: { foo: 'bar' },
+    };
+
+    this.uploadInput.emit(event);
+  }
+
+  cancelUpload(id: string): void {
+    this.uploadInput.emit({ type: 'cancel', id: id });
   }
 
   removeFile(id: string): void {

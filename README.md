@@ -2,6 +2,9 @@
 
 La aplicación es una herramienta desarrollada en Angular que permite combinar varios archivos Excel del mismo formato en uno solo. Esta aplicación es ideal para aquellos que trabajan con grandes cantidades de datos en formato Excel y necesitan combinar múltiples archivos de manera eficiente.
 
+[DEMO](https://lighthearted-pavlova-49d096.netlify.app)
+
+
 ## Requisitos
 
 Antes de utilizar esta aplicación, asegúrate de tener instalado lo siguiente:
